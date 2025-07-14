@@ -6,6 +6,7 @@ import { StyleSheet } from 'react-native';
     tertiary: '#3a0ca3',
     success: '#4cc9f0',
     warning: '#fca311',
+    showProfile: '#facc15',
     danger: '#e71d36',
     dark: '#22223b',
     background: '#fff',

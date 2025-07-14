@@ -1,4 +1,4 @@
-import { View, Text, Pressable } from 'react-native';
+import { Text, Pressable } from 'react-native';
 import { globalStyles } from '../../theme/theme';
 
 interface Props {
@@ -8,13 +8,11 @@ interface Props {
 
 export const PrimaryButton = ({onPress, label}: Props) => {
   
-  return (
-    <View style={globalStyles.container}>      
+  return ( 
       <Pressable 
         onPress={onPress}
         style={globalStyles.primaryButton}>
         <Text style={globalStyles.buttonText}>{label}</Text>
       </Pressable>
-    </View>
   )
 }
