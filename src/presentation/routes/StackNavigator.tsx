@@ -1,4 +1,6 @@
+import { useEffect } from 'react';
 import { createStackNavigator } from '@react-navigation/stack';  
+import { useNavigation } from '@react-navigation/native';
 import { HomeScreen } from '../screens/home/HomeScreen';
 import { ProductScreen } from '../screens/products/ProductScreen';
 import { ProductsScreen } from '../screens/products/ProductsScreen';
@@ -14,11 +16,20 @@ export type RootStackParams = {
 const Stack = createStackNavigator<RootStackParams>();
   
 export const StackNavigator=()=>{
+  const navigator = useNavigation();
+  
+  useEffect(() => {
+    navigator.setOptions({
+      headerShown: false,
+  })
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <Stack.Navigator 
       screenOptions={
         {
-          headerShown: true,
+          headerShown: false,
           headerStyle:{
             elevation:0,
             shadowColor: 'transparent'
