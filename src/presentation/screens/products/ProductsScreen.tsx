@@ -4,6 +4,7 @@ import { globalStyles } from '../../theme/theme';
 import { FlatList } from 'react-native-gesture-handler';
 import { PrimaryButton } from '../../components/shared/PrimaryButton';
 import { type RootStackParams } from '../../routes/StackNavigator';
+import { HamburgerMenu } from '../../components/shared/HamburgerMenu';
 
 const products = [
   {id: 1, name: 'Producto 1'},
@@ -18,7 +19,8 @@ export const ProductsScreen = () => {
   const navigation = useNavigation<NavigationProp<RootStackParams>>();
   return (
     <View style= {globalStyles.container}>
-      <Text style={localStyles.bottomText}>Productos</Text>
+      {/* <Text style={localStyles.bottomText}>Productos</Text> */}
+      <HamburgerMenu />
       <FlatList
         data={ products }
         renderItem={({item})=>(

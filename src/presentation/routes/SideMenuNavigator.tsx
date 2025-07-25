@@ -1,9 +1,11 @@
+/* eslint-disable react/no-unstable-nested-components */
 import { View, useWindowDimensions } from 'react-native';
 import { createDrawerNavigator, DrawerContentComponentProps, DrawerContentScrollView, DrawerItemList } from '@react-navigation/drawer';
 /* import { StackNavigator } from './StackNavigator'; */
 import { ProfileScreen } from '../screens/profile/ProfileScreen';
 import { globalColors } from '../theme/theme';
 import { BottomTabNavigator } from './BottomTabsNavigator';
+import Ionicons from '@react-native-vector-icons/ionicons';
 
 const Drawer = createDrawerNavigator();
 
@@ -29,8 +31,8 @@ export const SideMenuNavigator = () => {
       }}
     >
   {/*     <Drawer.Screen name="StackNvigator" component={StackNavigator} /> */}
-      <Drawer.Screen name="Tabs" component={BottomTabNavigator} />
-      <Drawer.Screen name="Profile" component={ProfileScreen} />
+      <Drawer.Screen options={{drawerIcon: ({})=>(<Ionicons name='american-football-outline' size= {30} color = {globalColors.secondary} /> )}} name="Tabs" component={BottomTabNavigator} />
+      <Drawer.Screen options={{drawerIcon: ({})=>(<Ionicons name='apps-outline' size= {30} color = {globalColors.secondary} /> )}} name="Profile" component={ProfileScreen} />
     </Drawer.Navigator>
   );
 }

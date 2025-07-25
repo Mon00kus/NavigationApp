@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
   export const globalColors = {
     primary: '#7037eb',
     secondary: '#f72585',
-    tertiary: '#3a0ca3',
+    thirdnary: '#ebb70dff',
     success: '#4cc9f0',
     warning: '#fca311',
     showProfile: '#facc15',

@@ -10,7 +10,7 @@ export const Tab1Screen = () => {
       <Text>Tab1 Screen</Text>      
       <Ionicons 
         name='rocket-outline'
-        size = {160}
+        size = {60}
         color = {'red'}
       /> 
       
